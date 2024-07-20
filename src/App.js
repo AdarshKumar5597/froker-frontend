@@ -12,7 +12,7 @@ function App() {
   const fetchBlogPosts = async () => {
     setLoadingPosts(true);
     try {
-      const response = await fetch("http://localhost:4000/blogs");
+      const response = await fetch("https://froker-backend-up9a.onrender.com/blogs");
       const data = await response.json();
       console.log(data.blogs);
 
@@ -31,7 +31,7 @@ function App() {
     setLoadingHero(true);
     try {
       const response = await fetch(
-        "http://localhost:4000/blogs/popular/first-three"
+        "https://froker-backend-up9a.onrender.com/blogs/popular/first-three"
       );
       const data = await response.json();
       console.log(data.blogs);

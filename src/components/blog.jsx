@@ -14,7 +14,7 @@ const Blog = () => {
 
   const fetchBlogPosts = async () => {
     try {
-      const response = await fetch("http://localhost:4000/popular");
+      const response = await fetch("https://froker-backend-up9a.onrender.com/popular");
       const data = await response.json();
       console.log(data.blogs);
       setBlogposts(data.blogs);
@@ -25,7 +25,7 @@ const Blog = () => {
 
   const fetchBlogById = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/blogs/${id}`);
+      const response = await fetch(`https://froker-backend-up9a.onrender.com/blogs/${id}`);
       const data = await response.json();
       console.log(data.blog);
       setBlog(data.blog);
@@ -38,7 +38,7 @@ const Blog = () => {
   const updateLikes = async () => {
     try {
       if (like) {
-        const response = await fetch(`http://localhost:4000/blogs/${id}/like`, {
+        const response = await fetch(`https://froker-backend-up9a.onrender.com/blogs/${id}/like`, {
           method: "POST",
         });
         const data = await response.json();
@@ -47,7 +47,7 @@ const Blog = () => {
         setLike(!like);
       }
       else {
-        const response = await fetch(`http://localhost:4000/blogs/${id}/like`, {
+        const response = await fetch(`https://froker-backend-up9a.onrender.com/blogs/${id}/like`, {
           method: "DELETE",
         });
         const data = await response.json();
